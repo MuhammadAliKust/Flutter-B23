@@ -40,26 +40,31 @@ class MyApp extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
+              Icon(Icons.add),
+              Column(children: [
                 Icon(Icons.add),
                 Icon(Icons.add),
-                Column(
-                  children: [
-                    Icon(Icons.add),
-                    Icon(Icons.add),
-                    Icon(Icons.add),
-                    Row(
-                      children: [
-                        Icon(Icons.add),
-                        Icon(Icons.add),
-                        Icon(Icons.add),
-                        Icon(Icons.add),
-                      ],
-                    ),
-                  ],
-                ),
                 Icon(Icons.add),
-              ],
-            ),
+              ],),
+              Column(children: [
+                Icon(Icons.add),
+                Row(children: [
+                  Icon(Icons.add),
+                  Icon(Icons.add),
+                ],),
+                Row(children: [
+                  Icon(Icons.add),
+                  Icon(Icons.add),
+                  Icon(Icons.add),
+                ],),
+                Row(children: [
+                  Icon(Icons.add),
+                  Icon(Icons.add),
+                ],),
+                Icon(Icons.add)
+              ],),
+              Icon(Icons.add)
+            ],)
           ],
         ),
         floatingActionButton: FloatingActionButton(
