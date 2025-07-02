@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'network_image.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -10,69 +12,67 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.yellow,
-        appBar: AppBar(
-          backgroundColor: Colors.blue,
-          title: Text(
-            'First Screen',
-            style: TextStyle(
-              fontSize: 40,
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          centerTitle: true,
-          leading: Icon(Icons.arrow_back, size: 30, color: Colors.white),
-          actions: [
-            Icon(Icons.notifications, size: 35),
-            Icon(Icons.shopping_cart, size: 35),
-            Icon(Icons.exit_to_app, size: 35),
-          ],
-        ),
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text("First Text", style: TextStyle(fontSize: 30)),
-            SizedBox(height: 50),
-            Text("Second Text", style: TextStyle(fontSize: 30)),
-            SizedBox(height: 50),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-              Icon(Icons.add),
-              Column(children: [
-                Icon(Icons.add),
-                Icon(Icons.add),
-                Icon(Icons.add),
-              ],),
-              Column(children: [
-                Icon(Icons.add),
-                Row(children: [
-                  Icon(Icons.add),
-                  Icon(Icons.add),
-                ],),
-                Row(children: [
-                  Icon(Icons.add),
-                  Icon(Icons.add),
-                  Icon(Icons.add),
-                ],),
-                Row(children: [
-                  Icon(Icons.add),
-                  Icon(Icons.add),
-                ],),
-                Icon(Icons.add)
-              ],),
-              Icon(Icons.add)
-            ],)
-          ],
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          child: Icon(Icons.add, color: Colors.white),
-          backgroundColor: Colors.blue,
-        ),
-      ),
+      home: NetworkImageDemo(),
+      // home: Scaffold(
+      //   backgroundColor: Colors.yellow,
+      //   appBar: AppBar(
+      //     backgroundColor: Colors.blue,
+      //     title: Text(
+      //       'First Screen',
+      //       style: TextStyle(
+      //         fontSize: 40,
+      //         color: Colors.white,
+      //         fontWeight: FontWeight.bold,
+      //       ),
+      //     ),
+      //     centerTitle: true,
+      //     leading: Icon(Icons.arrow_back, size: 30, color: Colors.white),
+      //     actions: [
+      //       Icon(Icons.notifications, size: 35),
+      //       Icon(Icons.shopping_cart, size: 35),
+      //       Icon(Icons.exit_to_app, size: 35),
+      //     ],
+      //   ),
+      //   body: Column(
+      //     crossAxisAlignment: CrossAxisAlignment.start,
+      //     children: [
+      //       Text("First Text", style: TextStyle(fontSize: 30)),
+      //       SizedBox(height: 50),
+      //       Text("Second Text", style: TextStyle(fontSize: 30)),
+      //       SizedBox(height: 50),
+      //       Row(
+      //         mainAxisAlignment: MainAxisAlignment.spaceAround,
+      //         children: [
+      //           Icon(Icons.add),
+      //           Column(
+      //             children: [Icon(Icons.add), Icon(Icons.add), Icon(Icons.add)],
+      //           ),
+      //           Column(
+      //             children: [
+      //               Icon(Icons.add),
+      //               Row(children: [Icon(Icons.add), Icon(Icons.add)]),
+      //               Row(
+      //                 children: [
+      //                   Icon(Icons.add),
+      //                   Icon(Icons.add),
+      //                   Icon(Icons.add),
+      //                 ],
+      //               ),
+      //               Row(children: [Icon(Icons.add), Icon(Icons.add)]),
+      //               Icon(Icons.add),
+      //             ],
+      //           ),
+      //           Icon(Icons.add),
+      //         ],
+      //       ),
+      //     ],
+      //   ),
+      //   floatingActionButton: FloatingActionButton(
+      //     onPressed: () {},
+      //     child: Icon(Icons.add, color: Colors.white),
+      //     backgroundColor: Colors.blue,
+      //   ),
+      // ),
     );
   }
 }
