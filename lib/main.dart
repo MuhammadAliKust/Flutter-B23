@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'asset_image.dart';
 import 'network_image.dart';
 
 void main() {
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: NetworkImageDemo(),
+      home: AssetImageDemo(),
       // home: Scaffold(
       //   backgroundColor: Colors.yellow,
       //   appBar: AppBar(
