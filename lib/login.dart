@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 class LoginView extends StatelessWidget {
-  const LoginView({super.key});
+  LoginView({super.key});
+
+  TextEditingController emailController = TextEditingController();
+  TextEditingController pwdController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -10,6 +13,7 @@ class LoginView extends StatelessWidget {
       body: Column(
         children: [
           TextField(
+            controller: emailController,
             enabled: true,
             maxLines: 1,
             keyboardType: TextInputType.text,
@@ -36,6 +40,7 @@ class LoginView extends StatelessWidget {
           ),
           SizedBox(height: 20),
           TextField(
+            controller: pwdController,
             enabled: true,
             maxLines: 1,
             obscureText: true,
@@ -62,7 +67,31 @@ class LoginView extends StatelessWidget {
             ),
           ),
           SizedBox(height: 20),
-          ElevatedButton(onPressed: () {}, child: Text("Login")),
+          ElevatedButton(
+            onPressed: () {
+              if (emailController.text.isEmpty) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(content: Text("Email cannot be empty.")),
+                );
+                return;
+              }
+              if (pwdController.text.isEmpty) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(content: Text("Password cannot be empty.")),
+                );
+                return;
+              }
+              if (pwdController.text.length < 6) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text("Password must be 6 or more characters."),
+                  ),
+                );
+                return;
+              }
+            },
+            child: Text("Login"),
+          ),
         ],
       ),
     );
