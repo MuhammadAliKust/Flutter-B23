@@ -9,10 +9,14 @@ class AssetImageDemo extends StatelessWidget {
       appBar: AppBar(
         title: Text("Asset Image"),
       ),
-      body: Image.asset('assets/images/1.jpg',
-      height: 200,
-      width: 300,
-      fit: BoxFit.fill,),
+      body: Column(
+        children: [
+          Image.asset('assets/images/1.jpg',
+          height: 200,
+          width: 300,
+          fit: BoxFit.fill,),
+        ],
+      ),
     );
   }
 }
