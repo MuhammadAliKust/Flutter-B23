@@ -11,6 +11,7 @@ class LoginView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text("Login")),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           TextField(
             controller: emailController,
