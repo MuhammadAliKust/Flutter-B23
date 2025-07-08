@@ -15,7 +15,7 @@ class ListViewDemo extends StatelessWidget {
       description: 'Second Description',
       time: '1:45',
     ),
-    // NotificationModel(title: 'Third Notification', description: 'Third Description', time: '12:45'),
+    NotificationModel(title: 'Third Notification', description: 'Third Description', time: '12:45'),
   ];
 
   @override
