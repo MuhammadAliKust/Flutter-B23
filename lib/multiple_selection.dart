@@ -17,31 +17,36 @@ class _MultipleSelectionDemoState extends State<MultipleSelectionDemo> {
       body: ListView.builder(
         itemCount: 10,
         itemBuilder: (context, i) {
-          return Padding(
-            padding: const EdgeInsets.all(8),
-            child: Card(
-              elevation: 10,
-              color: selectedIndex.contains(i) ? Colors.blue : Colors.white,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10),
+          return Column(
+            children: [
+              Image.asset('assets/images/Group.png', height: 100),
+              Text("Title"),
+              Text("Description"),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  IconButton(
+                    onPressed: () {
+                      if (selectedIndex.contains(i)) {
+                        selectedIndex.remove(i);
+                      } else {
+                        selectedIndex.add(i);
+                      }
+                      setState(() {});
+                    },
+                    icon: Icon(
+                      Icons.favorite,
+                      color: selectedIndex.contains(i)
+                          ? Colors.red
+                          : Colors.grey,
+                    ),
+                  ),
+                  Icon(Icons.add),
+                  Icon(Icons.add),
+                  Icon(Icons.add),
+                ],
               ),
-              child: ListTile(
-                onTap: () {
-                  if (selectedIndex.contains(i)) {
-                    selectedIndex.remove(i);
-                  } else {
-                    selectedIndex.add(i);
-                  }
-
-                  setState(() {});
-                },
-                leading: Icon(Icons.notifications),
-                title: Text("Selected Index: $selectedIndex"),
-                subtitle: Text("Loop Index: $i"),
-                trailing: Icon(Icons.arrow_forward),
-                // tileColor: Colors.blue,
-              ),
-            ),
+            ],
           );
         },
       ),
