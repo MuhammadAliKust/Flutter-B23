@@ -1,9 +1,11 @@
-void main(){
-  int a = 2028;
+void main() {
+  int month = 1;
 
-  if(a%4 == 0){
-    print("A is leap year");
-  }else{
-    print("A is not a leap year");
+  if (month == 1) {
+    print("January");
+  } else if (month == 2) {
+    print("February");
+  } else if (month == 3) {
+    print("March");
   }
 }

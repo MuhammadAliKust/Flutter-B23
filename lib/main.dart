@@ -1,8 +1,10 @@
 import 'package:fltter_b23/list_view.dart';
+import 'package:fltter_b23/page_view.dart';
 import 'package:flutter/material.dart';
 
 import 'asset_image.dart';
 import 'login.dart';
+import 'multiple_selection.dart';
 import 'network_image.dart';
 
 void main() {
@@ -15,7 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: ListViewDemo(),
+      home: PageViewDemo(),
       // home: Scaffold(
       //   backgroundColor: Colors.yellow,
       //   appBar: AppBar(
