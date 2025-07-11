@@ -3,6 +3,7 @@ import 'package:fltter_b23/page_view.dart';
 import 'package:flutter/material.dart';
 
 import 'asset_image.dart';
+import 'grid_view_demo.dart';
 import 'login.dart';
 import 'multiple_selection.dart';
 import 'network_image.dart';
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: MultipleSelectionDemo(),
+      home: GridViewDemo(),
       // home: Scaffold(
       //   backgroundColor: Colors.yellow,
       //   appBar: AppBar(
