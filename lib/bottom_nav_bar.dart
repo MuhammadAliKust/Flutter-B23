@@ -3,6 +3,9 @@ import 'package:fltter_b23/login.dart';
 import 'package:fltter_b23/page_view.dart';
 import 'package:flutter/material.dart';
 
+
+
+
 class BottomNavBarDemo extends StatefulWidget {
   const BottomNavBarDemo({super.key});
 
@@ -12,7 +15,7 @@ class BottomNavBarDemo extends StatefulWidget {
 
 class _BottomNavBarDemoState extends State<BottomNavBarDemo> {
   int selectedIndex = 0;
-
+   // This is my screen list
   List<Widget> screenList = [LoginView(), GridViewDemo(), PageViewDemo()];
 
   @override
@@ -20,7 +23,7 @@ class _BottomNavBarDemoState extends State<BottomNavBarDemo> {
     return Scaffold(
       body: screenList.elementAt(selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
-        onTap: (tapIndex) {
+       onTap: (tapIndex) {
           selectedIndex = tapIndex;
           setState(() {});
         },
