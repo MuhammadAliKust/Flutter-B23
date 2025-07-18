@@ -1,5 +1,6 @@
 import 'package:fltter_b23/list_view.dart';
 import 'package:fltter_b23/page_view.dart';
+import 'package:fltter_b23/screen_a.dart';
 import 'package:fltter_b23/tabbar_view.dart';
 import 'package:fltter_b23/time_picker.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: TimePickerDemo(),
+      home: ScreenA(),
       // home: Scaffold(
       //   backgroundColor: Colors.yellow,
       //   appBar: AppBar(
