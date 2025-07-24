@@ -39,7 +39,7 @@ class GoogleMapDemo extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text("Google Map")),
       body: GoogleMap(
-        mapType: MapType.normal,
+        mapType: MapType.hybrid,
         initialCameraPosition: CameraPosition(
           target: LatLng(33.6996, 73.0362),
           zoom: 13,
