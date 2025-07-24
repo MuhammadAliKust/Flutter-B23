@@ -16,8 +16,8 @@ class ScreenB extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Text(name,style: TextStyle(fontSize: 40),),
-          Text(email,style: TextStyle(fontSize: 40),),
+          Text(name, style: TextStyle(fontSize: 40)),
+          Text(email, style: TextStyle(fontSize: 40)),
           Center(
             child: ElevatedButton(
               onPressed: () {
