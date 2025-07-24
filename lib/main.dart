@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: DropDownDemo(),
+      home: GoogleMapDemo(),
       // home: Scaffold(
       //   backgroundColor: Colors.yellow,
       //   appBar: AppBar(
