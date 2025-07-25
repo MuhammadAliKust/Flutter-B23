@@ -37,7 +37,13 @@ class GoogleMapDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Google Map")),
+      appBar: AppBar(
+        title: Text(
+          "Google Map",
+          style: TextStyle(fontWeight: FontWeight.w700),
+        ),
+      ),
+
       body: GoogleMap(
         mapType: MapType.hybrid,
         initialCameraPosition: CameraPosition(

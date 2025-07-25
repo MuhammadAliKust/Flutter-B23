@@ -1,9 +1,11 @@
 import 'package:fltter_b23/list_view.dart';
 import 'package:fltter_b23/page_view.dart';
+import 'package:fltter_b23/providers/user.dart';
 import 'package:fltter_b23/screen_a.dart';
 import 'package:fltter_b23/tabbar_view.dart';
 import 'package:fltter_b23/time_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import 'asset_image.dart';
 import 'bottom_nav_bar.dart';
@@ -18,7 +20,12 @@ import 'multiple_selection.dart';
 import 'network_image.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(
+    MultiProvider(
+      providers: [ChangeNotifierProvider(create: (context) => UserProvider())],
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -27,7 +34,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: GoogleMapDemo(),
+      home: ScreenA(),
       // home: Scaffold(
       //   backgroundColor: Colors.yellow,
       //   appBar: AppBar(
